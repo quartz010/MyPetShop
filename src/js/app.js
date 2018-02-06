@@ -20,6 +20,7 @@ App = {
       }
     });
     // 上面代码是初始化狗狗信息
+    
     return App.initWeb3();
   },
 
