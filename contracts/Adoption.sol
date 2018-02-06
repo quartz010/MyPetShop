@@ -4,15 +4,16 @@ contract Adoption {
 
   address[16] public adopters;  // 保存领养者的地址
 
-  
-  /** 
-  // 领养宠物
+  /**
+  func: 领养宠物
+  para: 领养宠物ID
   */
   function adopt(uint petId) public returns (uint) {
+    
     require(petId >= 0 && petId <= 15);  // 确保id在数组长度内
-
     adopters[petId] = msg.sender;        // 保存调用这地址 
-    return petId;
+    return petId; //返回当前宠物ID
+
   }
 
   // 返回领养者
